@@ -1,0 +1,200 @@
+/* 1. VARIABLES ET RESET */ 
+:root { 
+    --primary-blue: #0b3d91;    /* Bleu PRO TECH */ 
+    --secondary-blue: #1e40af; 
+    --accent-cyan: #0ea5e9; 
+    --text-dark: #1e293b; 
+    --text-light: #64748b; 
+    --bg-light: #f8fafc; 
+    --white: #ffffff; 
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+} 
+ 
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+} 
+ 
+body { 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    line-height: 1.6; 
+    background-color: var(--bg-light); 
+    color: var(--text-dark); 
+} 
+ 
+/* 2. HEADER ET NAVIGATION */ 
+header { 
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue)); 
+    color: var(--white); 
+    padding: 3rem 1rem; 
+    text-align: center; 
+} 
+ 
+header h1 { 
+    font-size: 2.5rem; 
+    margin-bottom: 0.5rem; 
+    letter-spacing: 1px; 
+} 
+ 
+nav { 
+    background: var(--white); 
+    padding: 0.5rem; /* Réduit pour gagner de la place */ 
+    position: sticky; 
+    top: 0; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+    z-index: 1000; 
+ 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: nowrap; /* Interdit le passage à la ligne */ 
+} 
+ 
+/* ================= AJOUT POUR ALIGNEMENT MENU ================= */ 
+nav ul { 
+    display: flex;              /* Aligne les éléments horizontalement */ 
+    justify-content: center; 
+    list-style: none;           /* Supprime les puces */ 
+    padding: 0; 
+    margin: 0; 
+    flex-wrap: nowrap;          /* Une seule ligne */ 
+} 
+ 
+nav ul li { 
+    display: inline-flex;       /* Chaque item reste en ligne */ 
+    white-space: nowrap;        /* Empêche le texte de se casser */ 
+} 
+/* ============================================================= */ 
+ 
+/* LIENS DU MENU */ 
+nav a { 
+    text-decoration: none; 
+    color: var(--text-dark); 
+    font-weight: 600; 
+    margin: 0 3px; 
+    padding: 5px 6px; 
+    border-radius: 5px; 
+    transition: all 0.3s ease; 
+ 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 4px; 
+    white-space: nowrap; 
+    font-size: 14px; 
+} 
+ 
+/* ICÔNES DU MENU */ 
+nav a img { 
+    width: 18px; 
+    height: 18px; 
+    object-fit: contain; 
+} 
+ 
+nav a:hover { 
+    background-color: var(--primary-blue); 
+    color: var(--white); 
+} 
+ 
+/* 3. STRUCTURE PRINCIPALE */ 
+section { 
+    max-width: 1000px; 
+    margin: 2rem auto; 
+    padding: 2rem; 
+    background: var(--white); 
+    border-radius: 12px; 
+    box-shadow: var(--shadow); 
+} 
+ 
+/* LIENS DANS LES SECTIONS (réseaux sociaux) */ 
+section a { 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 10px; 
+    text-decoration: none; 
+    color: var(--primary-blue); 
+    font-weight: 500; 
+} 
+ 
+section a img { 
+    width: 24px; 
+    height: 24px; 
+    object-fit: contain; 
+} 
+ 
+h2 { 
+    color: var(--primary-blue); 
+    border-left: 5px solid var(--accent-cyan); 
+    padding-left: 15px; 
+    margin-bottom: 1.5rem; 
+} 
+ 
+/* 4. SYSTÈME DE CARTES */ 
+.container-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+    padding: 20px; 
+} 
+ 
+.carte { 
+    background: var(--white); 
+    border-radius: 10px; 
+    padding: 20px; 
+    text-align: center; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+    border: 1px solid #e2e8f0; 
+    transition: transform 0.3s ease; 
+} 
+ 
+.carte:hover { 
+    transform: translateY(-10px); 
+    box-shadow: var(--shadow); 
+} 
+ 
+.carte img { 
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-bottom: 15px; 
+    border: 3px solid var(--accent-cyan); 
+} 
+ 
+/* 5. FORMULAIRE */ 
+form { 
+    display: flex; 
+    flex-direction: column; 
+    max-width: 500px; 
+    margin: 0 auto; 
+} 
+ 
+input, select { 
+    padding: 12px; 
+    margin-bottom: 15px; 
+    border: 1px solid #cbd5e1; 
+    border-radius: 6px; 
+} 
+ 
+input[type="submit"] { 
+    background-color: var(--accent-cyan); 
+    color: white; 
+    border: none; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background 0.3s; 
+} 
+ 
+input[type="submit"]:hover { 
+    background-color: var(--primary-blue); 
+} 
+ 
+/* 6. PIED DE PAGE */ 
+footer { 
+    text-align: center; 
+    padding: 2rem; 
+    background: #1e293b; 
+    color: white; 
+    margin-top: 3rem; 
+} 
+ 
